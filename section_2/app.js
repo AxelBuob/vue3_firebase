@@ -9,21 +9,24 @@ const app = Vue.createApp({
                   author: "Alexandre Dumas",
                   birthDate: "July 24, 1802",
                   deathDate: "December 5, 1870",
-                  img: "./assets/1.jpg"
+                  img: "./assets/1.jpg",
+                  isFav: true
                 },
                 {
                   title: "The Count of Monte Cristo",
                   author: "Alexandre Dumas",
                   birthDate: "July 24, 1802",
                   deathDate: "December 5, 1870",
-                  img: "./assets/2.jpg"
+                  img: "./assets/2.jpg",
+                  isFav: false
                 },
                 {
                   title: "Queen Margot",
                   author: "Alexandre Dumas",
                   birthDate: "July 24, 1802",
                   deathDate: "December 5, 1870",
-                  img: "./assets/3.jpg"
+                  img: "./assets/3.jpg",
+                  isFav: true
                 }
             ],
             x: 0,

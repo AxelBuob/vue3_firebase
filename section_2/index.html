@@ -15,6 +15,12 @@
             margin: 20px;
             display: inline-block;
         }
+
+        .fav {
+            background-color: rgb(255, 101, 101);
+        }
+
+
     </style>
 </head>
 <body>
@@ -25,7 +31,7 @@
         <div v-if="showBooks">
             <!-- Loop v-for -->
             <ul v-for="book in books">
-                <li>
+                <li :class="{fav: book.isFav }">
                     <img :src="book.img" :alt="book.title">
                     <h1>{{ book.title }}</h1>
                     <p>{{ book.author }}</p>
