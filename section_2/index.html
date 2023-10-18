@@ -30,13 +30,16 @@
 
         <div v-if="showBooks">
             <!-- Loop v-for -->
-            <ul v-for="book in books">
-                <li :class="{fav: book.isFav }">
-                    <img :src="book.img" :alt="book.title">
-                    <h1>{{ book.title }}</h1>
-                    <p>{{ book.author }}</p>
-                    <p>From {{ book.birthDate }} to {{ book.deathDate }}</p>
+            <ul >
+                <li v-for="book in books">
+                    <div @click="toggleFav($event, book)" :class="{fav: book.isFav }">
+                        <img :src="book.img" :alt="book.title">
+                        <h1>{{ book.title }}</h1>
+                        <p>{{ book.author }}</p>
+                        <p>From {{ book.birthDate }} to {{ book.deathDate }}</p>
+                    </div>
                 </li>
+                
             </ul>
         </div>
         <button @click="toggleShowBooks">
