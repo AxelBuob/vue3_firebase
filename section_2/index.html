@@ -19,9 +19,18 @@
 </head>
 <body>
     <div id="app">
+        <!-- Attributes binding -->
+        <!-- <a :href="url">The best website ever</a> -->
+
         <div v-if="showBooks">
+            <!-- Loop v-for -->
             <ul v-for="book in books">
-                <li>{{ book.title }} - {{ book.author }} - {{ book.birthDate }} - {{ book.deathDate }}</li>
+                <li>
+                    <img :src="book.img" :alt="book.title">
+                    <h1>{{ book.title }}</h1>
+                    <p>{{ book.author }}</p>
+                    <p>From {{ book.birthDate }} to {{ book.deathDate }}</p>
+                </li>
             </ul>
         </div>
         <button @click="toggleShowBooks">

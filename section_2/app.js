@@ -1,25 +1,29 @@
 const app = Vue.createApp({
     data() {
         return {
+            url: "https://thenetninja.co.uk",
             showBooks: true,
             books: [
                 {
                   title: "The Three Musketeers",
                   author: "Alexandre Dumas",
                   birthDate: "July 24, 1802",
-                  deathDate: "December 5, 1870"
+                  deathDate: "December 5, 1870",
+                  img: "./assets/1.jpg"
                 },
                 {
                   title: "The Count of Monte Cristo",
                   author: "Alexandre Dumas",
                   birthDate: "July 24, 1802",
-                  deathDate: "December 5, 1870"
+                  deathDate: "December 5, 1870",
+                  img: "./assets/2.jpg"
                 },
                 {
                   title: "Queen Margot",
                   author: "Alexandre Dumas",
                   birthDate: "July 24, 1802",
-                  deathDate: "December 5, 1870"
+                  deathDate: "December 5, 1870",
+                  img: "./assets/3.jpg"
                 }
             ],
             x: 0,
