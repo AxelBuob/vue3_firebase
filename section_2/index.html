@@ -28,10 +28,11 @@
         <!-- Attributes binding -->
         <!-- <a :href="url">The best website ever</a> -->
 
+        <h1>Favorites Books</h1>
         <div v-if="showBooks">
             <!-- Loop v-for -->
             <ul >
-                <li v-for="book in books">
+                <li v-for="book in filteredBooks">
                     <div @click="toggleFav($event, book)" :class="{fav: book.isFav }">
                         <img :src="book.img" :alt="book.title">
                         <h1>{{ book.title }}</h1>
@@ -42,6 +43,7 @@
                 
             </ul>
         </div>
+
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
             <span v-else>Show Books</span>
