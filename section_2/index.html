@@ -9,10 +9,18 @@
 </head>
 <body>
     <div id="app">
-        <h2>{{ title }} - {{ author }} - {{ age }}</h2>
-        <button @:click="age++">Increase age</button>
-        <button @:click="age--">Decrease age</button>
-        <button @:click='changeTitle("OathBringer")'>Change Title</button>
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <!-- Hide with CSS -->
+        <div v-show="showBooks">Currently showing books</div>
+
+
     </div>
     <script src="app.js"></script>
 </body>
