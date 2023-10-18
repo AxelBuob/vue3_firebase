@@ -2,9 +2,26 @@ const app = Vue.createApp({
     data() {
         return {
             showBooks: true,
-            title: "The Final Empire",
-            author: "Brandon Sanderson",
-            age: 57,
+            books: [
+                {
+                  title: "The Three Musketeers",
+                  author: "Alexandre Dumas",
+                  birthDate: "July 24, 1802",
+                  deathDate: "December 5, 1870"
+                },
+                {
+                  title: "The Count of Monte Cristo",
+                  author: "Alexandre Dumas",
+                  birthDate: "July 24, 1802",
+                  deathDate: "December 5, 1870"
+                },
+                {
+                  title: "Queen Margot",
+                  author: "Alexandre Dumas",
+                  birthDate: "July 24, 1802",
+                  deathDate: "December 5, 1870"
+                }
+            ],
             x: 0,
             y: 0
         }

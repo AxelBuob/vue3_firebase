@@ -20,7 +20,9 @@
 <body>
     <div id="app">
         <div v-if="showBooks">
-            <p>{{ title }} - {{ author }} - {{ age }}</p>
+            <ul v-for="book in books">
+                <li>{{ book.title }} - {{ book.author }} - {{ book.birthDate }} - {{ book.deathDate }}</li>
+            </ul>
         </div>
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
