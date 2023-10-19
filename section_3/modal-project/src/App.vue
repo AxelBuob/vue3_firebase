@@ -1,14 +1,18 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <input type="text" ref="name">
-    <button @click="handleClick">Clik me</button>
+    <ModalTest />
   </div>
 </template>
 
 <script>
+import ModalTest from './components/ModalTest.vue'
+
 export default {
   name: 'App',
+  components: {
+    ModalTest
+  },
   data() {
     return {
       title: "My first Vue App"
