@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <ModalTest />
+    <ModalTest :header="header" :text="text" theme="sale"/>
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
   },
   data() {
     return {
-      title: "My first Vue App"
+      header: "Sign up for the give away!",
+      text: "Grab your ninja swag for half price."
     }
   },
   methods: {
