@@ -11,7 +11,13 @@
         </template>
       </ModalTest>
     </div>
+    <div v-if="showModalForm">
+      <ModalTest @close="toggleModalForm">
+        <h1>Modal Form</h1>
+      </ModalTest>
+    </div>
     <button @click.right="toggleModal">Open Modal (right)</button>
+    <button @click="toggleModalForm">Open Modal Form</button>
   </div>
 </template>
 
@@ -26,7 +32,8 @@ export default {
   data() {
     return {
       title: "Hello Vue!",
-      showModal: false
+      showModal: false,
+      showModalForm: false
     }
   },
   methods: {
@@ -37,6 +44,9 @@ export default {
     },
     toggleModal() {
       this.showModal = !this.showModal
+    },
+    toggleModalForm() {
+      this.showModalForm = !this.showModalForm
     }
   }
 }
