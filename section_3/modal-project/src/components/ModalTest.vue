@@ -1,12 +1,13 @@
 <template>
     <div class="backdrop">
         <div class="modal">
+            <h1>Modal Title</h1>
             <p>modal content</p>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
   .modal {
     width: 400px;
     padding: 20px;
@@ -20,5 +21,12 @@
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
+  }
+  .modal h1 {
+    color: red;
+  }
+  .modal p {
+    font-style: normal;
+    color: black;
   }
 </style>
