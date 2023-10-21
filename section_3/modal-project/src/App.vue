@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <div v-if="showModal">
+    <teleport to="#modals" v-if="showModal">
       <ModalTest theme="sale" @close="toggleModal">
         <h1>Ninja Giveway!</h1>
         <p>Grab your ninja swag for half price!</p>
@@ -10,12 +10,12 @@
           <a href="#">More info</a>
         </template>
       </ModalTest>
-    </div>
-    <div v-if="showModalForm">
+    </teleport>
+    <teleport to="#modals" v-if="showModalForm">
       <ModalTest @close="toggleModalForm">
         <h1>Modal Form</h1>
       </ModalTest>
-    </div>
+    </teleport>
     <button @click.right="toggleModal">Open Modal (right)</button>
     <button @click="toggleModalForm">Open Modal Form</button>
   </div>
@@ -61,5 +61,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 </style>
