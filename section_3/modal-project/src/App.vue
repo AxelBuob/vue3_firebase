@@ -1,7 +1,10 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <ModalTest :header="header" :text="text" theme="sale"/>
+    <div v-if="showModal">
+      <ModalTest :header="header" :text="text" theme="sale" @close="toggleModal"/>
+    </div>
+    <button @click="toggleModal">Open Modal</button>
   </div>
 </template>
 
@@ -15,8 +18,10 @@ export default {
   },
   data() {
     return {
+      title: "Hello Vue!",
       header: "Sign up for the give away!",
-      text: "Grab your ninja swag for half price."
+      text: "Grab your ninja swag for half price.",
+      showModal: false
     }
   },
   methods: {
@@ -24,6 +29,9 @@ export default {
       console.log(this.$refs.name.value)
       this.$refs.name.classList.add('active')
       this.$refs.name.focus()
+    },
+    toggleModal() {
+      this.showModal = !this.showModal
     }
   }
 }
@@ -39,7 +47,4 @@ export default {
   margin-top: 60px;
 }
 
-h1 {
-  color: green;
-}
 </style>
